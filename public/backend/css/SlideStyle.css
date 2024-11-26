@@ -7,19 +7,20 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #6c7b8c, #3b4c5c); /* Gradient nhẹ nhàng */
+    background: linear-gradient(135deg, #5d89fa, #3c3f56); /* Gradient xanh tươi và tím đậm */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 20px;
+    color: #f5f5f5;
 }
 
 .forms-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px; /* Khoảng cách giữa các form */
     width: 100%;
     max-width: 900px;
 }
@@ -27,65 +28,68 @@ body {
 .form-container {
     width: 100%;
     max-width: 400px;
-    padding: 30px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 15px; /* Góc bo mềm mại hơn */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
 /* Hiệu ứng hover */
 .form-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 label {
-    font-size: 1.3em;
-    color: #333;
-    font-weight: 600;
+    font-size: 1.5em;
+    color: #333333;
+    font-weight: 700;
     display: block;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 input {
     width: 100%;
-    height: 40px;
-    background: #f9f9f9;
-    margin: 10px 0;
+    height: 45px;
+    background: #f7f8fa; /* Màu nền nhẹ nhàng */
+    margin: 12px 0;
     padding: 0 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
     outline: none;
     font-size: 1em;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 input:focus {
     border-color: #4c92fc;
-    box-shadow: 0 0 5px rgba(76, 146, 252, 0.4);
+    box-shadow: 0 0 10px rgba(76, 146, 252, 0.3);
 }
 
 button {
     width: 100%;
-    height: 45px;
-    background: #4c92fc;
-    color: #fff;
+    height: 50px;
+    background: #4c92fc; /* Xanh sáng */
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
 button:hover {
-    background: #3579e3;
+    background: #3579e3; /* Xanh đậm hơn khi hover */
+    box-shadow: 0 8px 20px rgba(53, 121, 227, 0.4);
 }
 
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.96);
 }
 
 .alert.alert-success {
@@ -95,16 +99,17 @@ button:active {
     background: rgba(40, 167, 69, 0.1);
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 span.text-alert {
     color: #e74c3c;
     font-weight: bold;
-    margin-top: 10px;
     text-align: center;
+    display: block;
+    margin-top: 10px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .forms-wrapper {
         flex-direction: column;

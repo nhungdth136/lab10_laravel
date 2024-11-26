@@ -16,38 +16,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-    <div class="main">
-        <input type="checkbox" id="chk" aria-hidden="true">
-        <div class="signup">
+<div class="forms-wrapper">
+        <!-- Đăng ký -->
+        <div class="form-container">
             <form action="{{ route('register') }}" method="POST">
                 @csrf
-                <label for="chk" aria-hidden="true">Sign up</label>
+                <label for="signup">Đăng Ký</label>
                 @if (Session::has('register_message'))
-                    <div class="alert alert-success">
+                    <div class="alert-success">
                         {{ Session::get('register_message') }}
                     </div>
                 @endif
-
-                <input type="text" name="admin_name" placeholder="Username" required="">
-                <input type="email" name="admin_email" placeholder="Email" required="">
-                <input type="tel" name="admin_phone" placeholder="Phone Number" required="">
-                <input type="password" name="admin_password" placeholder="Password" required="">
-                <button>Sign up</button>
+                <input type="text" name="admin_name" placeholder="Tên đăng nhập" required>
+                <input type="email" name="admin_email" placeholder="Email" required>
+                <input type="tel" name="admin_phone" placeholder="Số điện thoại" required>
+                <input type="password" name="admin_password" placeholder="Mật khẩu" required>
+                <button type="submit">Đăng Ký</button>
             </form>
         </div>
-        <div class="login">
-            <form action="{{ URL::to('/admin-dashboard') }}" method="post">
-                <label for="chk" aria-hidden="true">Login</label>
+
+        <!-- Đăng nhập -->
+        <div class="form-container">
+            <form action="{{ URL::to('/admin-dashboard') }}" method="POST">
+                <label for="login">Đăng Nhập</label>
                 @if (Session::has('login_message'))
-                    <span class="text-alert">{{ Session::get('login_message') }}</span>
+                    <div class="text-alert">
+                        {{ Session::get('login_message') }}
+                    </div>
                 @endif
-                {{ csrf_field() }}
-                <input type="email" name="admin_email" placeholder="Email" required="">
-                <input type="password" name="admin_password" placeholder="Password" required="">
-                <button>Login</button>
+                @csrf
+                <input type="email" name="admin_email" placeholder="Email" required>
+                <input type="password" name="admin_password" placeholder="Mật khẩu" required>
+                <button type="submit">Đăng Nhập</button>
             </form>
         </div>
-
+    </div>
 
         <script src="{{ asset('backend/js/bootstrap.js') }}"></script>
         <script src="{{ asset('backend/js/jquery.dcjqaccordion.2.7.js') }}"></script>
