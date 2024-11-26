@@ -1,0 +1,113 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6c7b8c, #3b4c5c); /* Gradient nhẹ nhàng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.forms-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover */
+.form-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4c92fc;
+    box-shadow: 0 0 5px rgba(76, 146, 252, 0.4);
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background: #4c92fc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #3579e3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.alert.alert-success {
+    color: #28a745;
+    text-align: center;
+    font-weight: bold;
+    background: rgba(40, 167, 69, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+span.text-alert {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .forms-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
